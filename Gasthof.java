@@ -12,16 +12,16 @@ public class Gasthof {
     public void add(Gast gast){
         gaeste.add(gast);
     }
+    public void addAll(Gast... liste){gaeste.addAll(List.of(liste));}
     public void bericht(){
         for (Gast gast: gaeste){
-
+            System.out.println(gast.ausruhen());
+            System.out.println(gast.bewirten());
         }
     }
 }
 
 interface Gast {
-
-    String name = "";
-    String[] ausruhen();
-    String[] bewirten();
+    String ausruhen();
+    String bewirten();
 }
